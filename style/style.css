@@ -38,16 +38,7 @@ body .main-page-container {
   background-repeat: no-repeat;
 }
 
-body .main-page-container .block-with-girl {
-  height: calc(100% - 273px);
-  position: relative;
-  background-image: url(../img/start-img.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom 111% right 0px;
-}
-
-body .main-page-container .block-with-girl .start-btn {
+body .main-page-container .start-btn {
   display: block;
   width: 170px;
   height: 47px;
@@ -63,8 +54,18 @@ body .main-page-container .block-with-girl .start-btn {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 2;
   bottom: 30px;
   cursor: pointer;
+}
+
+body .main-page-container .block-with-girl {
+  height: calc(100% - 273px);
+  position: relative;
+  background-image: url(../img/start-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 111% right 0px;
 }
 
 body .main-page-container .survey-wrapper {
@@ -963,7 +964,7 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 @media (max-height: 670px) {
   body .main-page-container .block-with-girl {
-    height: calc(100% - 224px);
+    height: calc(100% - 225px);
   }
 }
 

@@ -29,6 +29,26 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    .start-btn{
+      display: block;
+      width: 170px;
+      height: 47px;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      color: #333333;
+      font-size: 16px;
+      line-height: 45px;
+      text-align: center;
+      background: #fff;
+      text-decoration: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      bottom: 30px;
+      cursor: pointer;
+    }
     .block-with-girl{
       height: calc(100% - 273px);
       position: relative;
@@ -36,25 +56,7 @@ body{
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom 111% right 0px;
-      .start-btn{
-        display: block;
-        width: 170px;
-        height: 47px;
-        margin: 0 auto;
-        outline: none;
-        border: none;
-        color: #333333;
-        font-size: 16px;
-        line-height: 45px;
-        text-align: center;
-        background: #fff;
-        text-decoration: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 30px;
-        cursor: pointer;
-      }
+    
     }
     .survey-wrapper{
       padding: 40px 30px 30px 30px;
@@ -807,7 +809,7 @@ body{
 }
 @media (max-height: 670px) {
   body .main-page-container .block-with-girl{
-    height: calc(100% - 224px);
+    height: calc(100% - 225px);
   }
 }
 @media (min-width: 448px) {
