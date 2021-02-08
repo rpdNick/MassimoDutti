@@ -8,7 +8,7 @@
   padding: 0 25px;
 }
 .gray-block{
-  background: #ECECEC;
+  background: #ffffff;
 }
 .p-10{
   padding: 10px 0px;
@@ -236,18 +236,24 @@ body{
         padding-bottom: 10px;
         .dark-txt{
           color: #666666;
-          font-weight: 600;
-          font-size: 13px;
+          font-weight: 500;
+          font-size: 12px;
           line-height: 16px;
           text-transform: uppercase;
+          padding: 0 25px;
         }
         .light-txt{
           font-weight: 400;
           font-size: 13px;
           font-style: italic;
-          line-height: 13px;
+          line-height: 15px;
           margin-top: 10px;
           color: #666666;
+          padding: 0 25px;
+        }
+        .gray-line{
+          height: 1px;
+          border-top: 1px solid rgba(223, 217, 205, 0.5);
         }
       }
       .question-wrapper{
@@ -509,8 +515,8 @@ body{
         }
         .comment-title{
           font-style: normal;
-          font-weight: 600;
-          font-size: 14px;
+          font-weight: 400;
+          font-size: 15px;
           line-height: 16px;
           color: #000000;
           margin-bottom: 35px;
@@ -528,6 +534,8 @@ body{
             top: 0;
             color: #A09B9B;
             font-size: 14px;
+            font-weight: 400;
+            font-style: italic;
             transition: all ease 0.5s;
             z-index: 1;
           }
