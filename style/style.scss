@@ -782,6 +782,11 @@ body{
     margin-top: 100px;
   }
 }
+@media (max-height: 737px) {
+  body .main-page-container .block-with-girl{
+    height: calc(100% - 252px);
+  }
+}
 @media (max-height: 729px) {
   body .survey-container #contacts-form .contacts-submit-wrapper{
     margin-top: 60px;
@@ -795,7 +800,7 @@ body{
     }
   }
 }
-@media (max-height: 740px) {
+@media (max-height: 720px) {
   body .main-page-container .block-with-girl{
     height: calc(100% - 252px);
   }
@@ -805,11 +810,17 @@ body{
     height: calc(100% - 224px);
   }
 }
+@media (min-width: 448px) {
+  body .main-page-container .block-with-girl{
+    height: calc(100% - 227px);
+  }
+}
 @media (min-height: 820px) {
   body .main-page-container .block-with-girl{
     height: calc(100% - 250px);
   }
 }
+
 @media (max-height: 650px) {
   body .main-page-container .block-with-girl .start-btn{
     bottom: 50px;
