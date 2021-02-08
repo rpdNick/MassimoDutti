@@ -60,7 +60,7 @@ body{
       padding: 40px 30px 30px 30px;
       position: relative;
       .logo-box{
-        width: 162px;
+        width: 144px;
         margin: 0 auto;
       }
       .top-title{
@@ -105,12 +105,18 @@ body{
     max-width: 450px;
     margin: 0 auto;
     padding-bottom: 30px;
+    min-height: 100vh;
+    background:#F8F6F3;
     .wrapper{
-      //padding: 0 25px;
       .logo-box{
         padding-top: 30px;
         padding-bottom: 30px;
-        border-bottom: 1px solid #C4C4C4;
+        width: 144px;
+        margin: 0 auto;
+      }
+      .center-line{
+        height: 1px;
+        border-bottom: 1px solid #A09B9B;
       }
       .main-question-box{
         margin-top: 20px;
@@ -780,18 +786,6 @@ body{
   body .survey-container #contacts-form .contacts-submit-wrapper{
     margin-top: 60px;
   }
-}
-@media (max-width: 344px) {
-  body .main-page-container .block-with-girl .start-btn{
-    bottom: 55px;
-  }
-}
-@media (max-width: 324px) {
-  body .main-page-container .block-with-girl .start-btn{
-    bottom: 75px;
-  }
-}
-@media (max-height: 729px) {
   body .main-page-container {
     .survey-wrapper{
       padding: 20px 20px 20px 20px;
@@ -801,9 +795,34 @@ body{
     }
   }
 }
+@media (max-height: 740px) {
+  body .main-page-container .block-with-girl{
+    height: calc(100% - 252px);
+  }
+}
+@media (max-height: 670px) {
+  body .main-page-container .block-with-girl{
+    height: calc(100% - 224px);
+  }
+}
+@media (min-height: 820px) {
+  body .main-page-container .block-with-girl{
+    height: calc(100% - 250px);
+  }
+}
+@media (max-height: 650px) {
+  body .main-page-container .block-with-girl .start-btn{
+    bottom: 50px;
+  }
+}
 @media (max-width: 356px) {
   body .survey-container .wrapper{
     padding: 0 10px;
+  }
+}
+@media (max-width: 324px) {
+  body .main-page-container .survey-wrapper .top-title{
+    font-size: 17px;
   }
 }
 @media (min-width: 430px) {
