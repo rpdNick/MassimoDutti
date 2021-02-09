@@ -121,8 +121,6 @@ body .survey-container {
   max-width: 450px;
   margin: 0 auto;
   padding-bottom: 30px;
-  min-height: 100vh;
-  background: #F8F6F3;
 }
 
 body .survey-container .wrapper .logo-box {
@@ -130,6 +128,12 @@ body .survey-container .wrapper .logo-box {
   padding-bottom: 30px;
   width: 144px;
   margin: 0 auto;
+}
+
+body .survey-container .wrapper .header-line {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #A09B9B;
 }
 
 body .survey-container .wrapper .center-line {
@@ -147,6 +151,12 @@ body .survey-container .wrapper .main-question-box .q-text {
   text-transform: uppercase;
   color: #000000;
   line-height: 22px;
+}
+
+body .survey-container .wrapper .main-question-box .contacts-header-txt {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
 }
 
 body .survey-container .wrapper .main-question-box .range10 {
@@ -529,12 +539,12 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sab-radio_container .checkmark {
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 4px;
-  width: 11px;
-  height: 11px;
-  max-width: 11px;
-  min-width: 11px;
+  width: 15px;
+  height: 15px;
+  max-width: 15px;
+  min-width: 15px;
   background-color: transparent;
   border: 1px solid #666666;
   border-radius: 50%;
@@ -544,15 +554,15 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sab-radio_container input:checked ~ .checkmark:before {
   content: '';
-  width: 11px;
-  height: 11px;
-  max-width: 11px;
-  min-width: 11px;
+  width: 7px;
+  height: 7px;
+  max-width: 7px;
+  min-width: 7px;
   position: absolute;
   background: #9F0002;
   border: 1px solid #9F0002;
-  left: -2px;
-  top: -2px;
+  left: calc( 50% - 4.5px);
+  top: calc( 50% - 4.5px);
   border-radius: 50%;
   -webkit-box-sizing: unset;
           box-sizing: unset;
@@ -767,7 +777,7 @@ body .survey-container #contacts-form {
 }
 
 body .survey-container #contacts-form .contacts-gray-block {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 body .survey-container #contacts-form .contacts-gray-block .wrapper {
@@ -785,7 +795,7 @@ body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box
 
 body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .contact-label {
   font-size: 14px;
-  color: #A09B9B;
+  color: #282423;
   font-style: normal;
   font-weight: normal;
   position: relative;
@@ -845,6 +855,7 @@ body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box
 body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .phone-prefix {
   position: absolute;
   left: 0;
+  bottom: 4px;
   padding: 10px 5px;
   font-size: 14px;
   color: #000;

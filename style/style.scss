@@ -107,14 +107,17 @@ body{
     max-width: 450px;
     margin: 0 auto;
     padding-bottom: 30px;
-    min-height: 100vh;
-    background:#F8F6F3;
     .wrapper{
       .logo-box{
         padding-top: 30px;
         padding-bottom: 30px;
         width: 144px;
         margin: 0 auto;
+      }
+      .header-line{
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px solid #A09B9B;
       }
       .center-line{
         height: 1px;
@@ -128,6 +131,11 @@ body{
           text-transform: uppercase;
           color: #000000;
           line-height: 22px;
+        }
+        .contacts-header-txt{
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 17px;
         }
         .range10{
           display: flex;
@@ -436,12 +444,12 @@ body{
                 }
                 .checkmark{
                   position: absolute;
-                  top: 6px;
+                  top: 5px;
                   left: 4px;
-                  width: 11px;
-                  height: 11px;
-                  max-width: 11px;
-                  min-width: 11px;
+                  width: 15px;
+                  height: 15px;
+                  max-width: 15px;
+                  min-width: 15px;
                   background-color: transparent;
                   border: 1px solid #666666;
                   border-radius: 50%;
@@ -449,15 +457,15 @@ body{
                 }
                 input:checked ~ .checkmark:before {
                   content: '';
-                  width: 11px;
-                  height: 11px;
-                  max-width: 11px;
-                  min-width: 11px;
+                  width: 7px;
+                  height: 7px;
+                  max-width: 7px;
+                  min-width: 7px;
                   position: absolute;
                   background: #9F0002;
                   border: 1px solid #9F0002;
-                  left: -2px;
-                  top: -2px;
+                  left: calc( 50% - 4.5px);
+                  top: calc( 50% - 4.5px);
                   border-radius: 50%;
                   box-sizing: unset;
                 }
@@ -624,7 +632,7 @@ body{
     #contacts-form{
       position: relative;
       .contacts-gray-block{
-        margin-top: 50px;
+        margin-top: 40px;
         .wrapper{
           padding: 20px 25px;
           .line{
@@ -635,7 +643,7 @@ body{
             position: relative;
             .contact-label{
               font-size: 14px;
-              color: #A09B9B;
+              color: #282423;
               font-style: normal;
               font-weight: normal;
               position: relative;
@@ -687,6 +695,7 @@ body{
             .phone-prefix{
               position: absolute;
               left: 0;
+              bottom: 4px;
               padding: 10px 5px;
               font-size: 14px;
               color: #000;
