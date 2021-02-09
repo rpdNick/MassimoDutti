@@ -143,10 +143,10 @@ body .survey-container .wrapper .main-question-box {
 
 body .survey-container .wrapper .main-question-box .q-text {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #000000;
-  line-height: 17px;
+  line-height: 22px;
 }
 
 body .survey-container .wrapper .main-question-box .range10 {
@@ -340,6 +340,10 @@ body .survey-container .hidden-questions .question-wrapper .flex-container {
   padding: 10px 25px 10px 25px;
 }
 
+body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper {
+  width: 100%;
+}
+
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container {
   display: block;
   position: relative;
@@ -371,12 +375,13 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .answer-font {
   font-size: 12px;
-  color: #333333;
+  color: #666666;
+  text-transform: uppercase;
 }
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .checkmark {
   position: absolute;
-  top: 1px;
+  top: 3px;
   left: 0px;
   width: 16px;
   height: 16px;
@@ -399,14 +404,15 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container input:checked ~ .checkmark:before {
   content: '';
-  width: 10px;
-  height: 10px;
-  max-width: 10px;
-  min-width: 10px;
+  width: 16px;
+  height: 16px;
+  max-width: 16px;
+  min-width: 16px;
   position: absolute;
   background: #9F0002;
-  left: calc( 50% - 5px);
-  top: calc( 50% - 5px);
+  left: -1px;
+  top: -1px;
+  border: 1px solid #9F0002;
   border-radius: 50%;
 }
 
@@ -482,6 +488,14 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper {
   padding-left: 22px;
   display: none;
+}
+
+body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .subanswer-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #221F1F;
+  font-style: italic;
+  font-size: 12px;
 }
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sab-radio_container {
@@ -616,7 +630,7 @@ body .survey-container .hidden-questions .question-wrapper .comment-title {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 16px;
+  line-height: 20px;
   color: #000000;
   margin-bottom: 35px;
   margin-top: 20px;

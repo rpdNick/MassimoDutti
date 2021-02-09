@@ -28,6 +28,7 @@ $('.nps-btn').on('change', function () {
             $('.main-radio-option').parents().find($('.question-main-container .comment-main-container')).hide();
         }
     } else if (val > 6 && val < 9){
+        $('.point7-8_val').text(val);
         $('.point_0-6').hide();
         $('.point_9-10').hide();
         $('.sub-answer-wrapper').hide();
@@ -58,6 +59,7 @@ $('.nps-btn').on('change', function () {
             $(commentsBad[i]).parent().find('.comment-icon').css({"left": "auto", "right": "0px", "top":"-5px"});
         }
     } else if (val > 8){
+        $('.point9-10_val').text(val);
         $('.point_0-6').hide();
         $('.point_9-10').fadeIn();
         $('.point_7-8').hide();
@@ -113,10 +115,12 @@ $(document).ready(function (){
             $('.point_0-6').hide();
             $('.point_9-10').hide();
             $('.point_7-8').fadeIn();
+            $('.point7-8_val').text(valNps);
         } else if (valNps > 8){
             $('.point_0-6').hide();
             $('.point_9-10').fadeIn();
             $('.point_7-8').hide();
+            $('.point9-10_val').text(valNps);
         } else if (isNaN(valNps)){
             return false;
         }
