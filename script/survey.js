@@ -70,6 +70,7 @@ $('.nps-btn').on('change', function () {
         $('.point_7-8').hide();
         $('.main-comment-error').hide();
         $('.sub-answer-wrapper').hide();
+        $('.sub-answer-comment-container').hide();
         $('.sub-comment-error').hide();
         $('.sub-answer-wrapper .error').hide();
         $('.point_7-8 .radio__option').prop('checked', false);
@@ -149,7 +150,6 @@ $(document).ready(function (){
     if ($('.sub-radio-option').is(":checked") == true){
         $(subQuestionItem).parents('.sub-answers-box').find('.additional-answer-wrapper').show();
     }else if ($('.sub-radio-option').is(":checked") == NaN){
-        console.log('228')
         return false;
     }
 
@@ -190,6 +190,9 @@ $('.main-radio-option').on('change', function (){
 
     }
     $('.sub-answer-comment-container').hide();
+    $('.additional-radio-option').prop('checked', false);
+    $('.additional-answer-wrapper').hide();
+    
     /*Show and hide sub-questions*/
     if ($(this).is(":checked") === true){
         $('.sub-answer-wrapper').hide();
