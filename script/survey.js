@@ -216,16 +216,11 @@ $('.sub-radio-option').on('change', function(){
 /* Show comments for sub-questions*/
 $('.sub-radio-option').on('change', function (){
    let val = $(this).val();
-    console.log(val);
     if (val == "Торговый зал" || val == "Примерочная" || val == "Касса"){
-        console.log("Сделай ответы обязательными!");
-        console.log($(this));
         $('.additional-radio-option').removeClass('req-additional-radio');
-        console.log($(this).parents('.sub-answers-box').find('.additional-answer-wrapper .additional-radio-option'));
         $(this).parents('.sub-answers-box').find('.additional-answer-wrapper .additional-radio-option').addClass('req-additional-radio');
    }
    else{
-       console.log('Сейчас сделай ответы не обязательными');
        $('.additional-radio-option').removeClass('req-additional-radio');
    }
     if(val.length > 0){
