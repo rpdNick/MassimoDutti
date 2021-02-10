@@ -571,7 +571,7 @@ body{
                   .answer{
                     font-size: 10px;
                     padding-left: 5px;
-                    color: #B2B2B2;
+                    color: #666666;
                     display: inline-block;
                   }
                   .checkmark{
@@ -584,7 +584,7 @@ body{
                     min-width: 9px;
                     background-color: transparent;
                     border-radius: 50%;
-                    background: #D1D0D0;
+                    background: #666666;
                     box-sizing: border-box;
                   }
                   input:checked ~ .checkmark:before {
