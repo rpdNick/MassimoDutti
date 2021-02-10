@@ -638,7 +638,8 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
   font-size: 12px;
   color: #E1032E;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  padding-left: 6px;
   display: none;
 }
 
@@ -777,6 +778,10 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
   background-color: transparent;
   border-radius: 0;
   -webkit-appearance: none;
+}
+
+body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sub-answers-box .additional-answer-wrapper .error {
+  padding-left: 26px;
 }
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .short-line {

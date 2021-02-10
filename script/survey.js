@@ -51,6 +51,8 @@ $('.nps-btn').on('change', function () {
         $('.shoping-result-wrapper').hide();
         $('.shoping-result-wrapper .error').hide();
         $('.additional-answer-wrapper').hide();
+        $('.additional-radio-option').removeClass('req-additional-radio');
+        $('.short-line').css("margin-top", "3px");
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -88,6 +90,8 @@ $('.nps-btn').on('change', function () {
         $('.shoping-result-wrapper').hide();
         $('.shoping-result-wrapper .error').hide();
         $('.additional-answer-wrapper').hide();
+        $('.additional-radio-option').removeClass('req-additional-radio');
+        $('.short-line').css("margin-top", "3px");
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsNormal).length; i++){
@@ -192,7 +196,6 @@ $('.main-radio-option').on('change', function (){
     $('.sub-answer-comment-container').hide();
     $('.additional-radio-option').prop('checked', false);
     $('.additional-answer-wrapper').hide();
-    console.log($(this));
     $('.short-line').css("margin-top", "3px");
     $(this).parents('.answer-separator').find('.short-line').css("margin-top", "0");
     /*Show and hide sub-questions*/
@@ -213,18 +216,31 @@ $('.sub-radio-option').on('change', function(){
 /* Show comments for sub-questions*/
 $('.sub-radio-option').on('change', function (){
    let val = $(this).val();
-
+    console.log(val);
+    if (val == "Торговый зал" || val == "Примерочная" || val == "Касса"){
+        console.log("Сделай ответы обязательными!");
+        console.log($(this));
+        $('.additional-radio-option').removeClass('req-additional-radio');
+        console.log($(this).parents('.sub-answers-box').find('.additional-answer-wrapper .additional-radio-option'));
+        $(this).parents('.sub-answers-box').find('.additional-answer-wrapper .additional-radio-option').addClass('req-additional-radio');
+   }
+   else{
+       console.log('Сейчас сделай ответы не обязательными');
+       $('.additional-radio-option').removeClass('req-additional-radio');
+   }
     if(val.length > 0){
         $(this).parents('.answer-array').find('.sub-answer-comment-container').slideDown();
         if(val == 'Другое' || val == 'Что было не так?'){
             $('.sub-comment').removeClass('required-comment');
             $(this).parents('.answer-array').find('.sub-answer-comment-container .comment-field').addClass("required-comment");
+            
         } else {
             $('.sub-comment').removeClass('required-comment');
             $(this).parents('.answer-array').find('.sub-answer-comment-container .comment-field').removeClass("required-comment");
             $('.sub-comment-error').hide();
         }
-   } else {
+   } 
+   else {
         $(this).parents('.answer-array').find('.sub-answer-comment-container').slideUp();
    }
 });

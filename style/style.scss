@@ -532,7 +532,8 @@ body{
                 font-size: 12px;
                 color: #E1032E;
                 margin-top: 10px;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
+                padding-left: 6px;
                 display: none;
               }
             }
@@ -652,6 +653,9 @@ body{
                       }
                     }
                   }
+                }
+                .error{
+                  padding-left: 26px;
                 }
               }
             }

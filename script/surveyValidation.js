@@ -8,6 +8,7 @@ form.addEventListener('submit', function (e){
     let subCommnts = document.querySelectorAll('.required-comment');
     let mainComment = document.querySelectorAll('.required-main-comment');
     let reqComment = document.querySelectorAll('.req-comment');
+    let additionalRadio = document.querySelectorAll('.req-additional-radio');
     let erroreArrayElements = [];
     for (let i = 0; i < el.length; i++) {
         if (el[i].tagName === 'INPUT') {
@@ -18,6 +19,19 @@ form.addEventListener('submit', function (e){
                     $(this).parents('.answers-wrapper').find('.error').hide();
                 });
                 $(el[i]).parents('.answers-wrapper').find('.error').fadeIn();
+            }
+        }
+    }
+     /* Additional Radio validation */
+    for (let i = 0; i < additionalRadio.length; i++) {
+        if (additionalRadio[i].tagName === 'INPUT') {
+            let name = additionalRadio[i].getAttribute('data-name');
+            if (document.querySelectorAll('[data-name=' + name + ']:checked').length === 0) {
+                erroreArrayElements.push(additionalRadio[i]);
+                $(additionalRadio[i]).on('click', function () {
+                    $(this).parents('.additional-answer-wrapper').find('.error').hide();
+                });
+                $(additionalRadio[i]).parents('.additional-answer-wrapper').find('.error').fadeIn();
             }
         }
     }
