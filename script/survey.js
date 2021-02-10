@@ -192,7 +192,9 @@ $('.main-radio-option').on('change', function (){
     $('.sub-answer-comment-container').hide();
     $('.additional-radio-option').prop('checked', false);
     $('.additional-answer-wrapper').hide();
-    
+    console.log($(this));
+    $('.short-line').css("margin-top", "3px");
+    $(this).parents('.answer-separator').find('.short-line').css("margin-top", "0");
     /*Show and hide sub-questions*/
     if ($(this).is(":checked") === true){
         $('.sub-answer-wrapper').hide();

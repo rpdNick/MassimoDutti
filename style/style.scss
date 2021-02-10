@@ -291,7 +291,7 @@ body{
               display: block;
               position: relative;
               padding-left: 20px;
-              margin-bottom: 12px;
+              // margin-bottom: 10px;
               cursor: pointer;
               -webkit-user-select: none;
               -moz-user-select: none;
@@ -413,10 +413,14 @@ body{
             // }
             .sub-answer-wrapper{
               padding-left: 22px;
+              border-left: 1px solid #C9C5C5;
+              margin-left: 8px;
+              margin-top: 5px;
               display: none;
               .subanswer-title{
                 display: inline-block;
                 margin-bottom: 10px;
+                margin-top: 10px;
                 color: #221F1F;
                 font-style: italic;
                 font-size: 12px;
@@ -425,7 +429,7 @@ body{
                 display: block;
                 position: relative;
                 padding-left: 20px;
-                margin-bottom: 12px;
+                margin-top: 10px;
                 cursor: pointer;
                 -webkit-user-select: none;
                 -moz-user-select: none;
@@ -543,6 +547,7 @@ body{
                   padding-left: 25px;
                   color: #221F1F;
                   margin-bottom: 10px;
+                  margin-top: 10px;
                 }
                 .additional-radio_container{
                   display: block;
@@ -622,6 +627,9 @@ body{
                       }
                     }
                   }
+                  input:checked ~ span {
+                    color: #221F1F;
+                  }
                   .answer-with-comment-wrap{
                     display: flex;
                     position: relative;
@@ -647,6 +655,14 @@ body{
                 }
               }
             }
+          }
+          .short-line{
+            height: 7px;
+            width: 1px;
+            border-left: 1px solid #C9C5C5;
+            margin-left: 33px;
+            margin-top: 3px;
+            margin-bottom: 3px;
           }
         }
         .comment-title{
@@ -981,7 +997,7 @@ body{
         padding: 0 25px;
       }
       .sub-answer-comment-container{
-        margin: 10px 0px 25px 0px;
+        margin: 10px 0px 5px 0px;
         display: none;
         padding: 0;
         .comment-box{
