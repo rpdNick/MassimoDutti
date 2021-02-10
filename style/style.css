@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,400;0,500;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1117,14 +1118,16 @@ body .end-page-container {
   height: 100%;
   max-width: 450px;
   margin: 0 auto;
-  background: url(../img/end-bg.jpg);
+  background: #e3ded8;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 body .end-page-container .logo-box {
-  padding: 40px 30px 0px 30px;
+  padding: 40px 0px 40px 0px;
+  margin: 0px 30px;
+  border-bottom: 1px solid #ffffff;
 }
 
 body .end-page-container .logo-box img {
@@ -1133,21 +1136,30 @@ body .end-page-container .logo-box img {
   margin: 0 auto;
 }
 
-body .end-page-container .thx-block {
-  margin-top: 50%;
-  background: rgba(223, 217, 205, 0.31);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
-  padding: 40px 20px;
-}
-
-body .end-page-container .thx-block .thx-txt {
+body .end-page-container .thx-message {
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
+  width: 100%;
+  padding: 0 30px;
+}
+
+body .end-page-container .middle-img {
+  width: 100%;
+  display: block;
+}
+
+body .end-page-container .bottom-line {
+  height: 1px;
+  border-bottom: 1px solid #ffffff;
+  margin: 100px 30px 10px 30px;
 }
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .error {
@@ -1202,15 +1214,29 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
   }
 }
 
-@media (max-height: 720px) {
+@media (max-height: 737px) {
   body .main-page-container .block-with-girl {
     height: calc(100% - 252px);
+  }
+  body .end-page-container .thx-message {
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-height: 670px) {
   body .main-page-container .block-with-girl {
     height: calc(100% - 225px);
+  }
+}
+
+@media (max-height: 622px) {
+  body .end-page-container .thx-message {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  body .end-page-container .bottom-line {
+    margin: 60px 30px 10px 30px;
   }
 }
 
@@ -1229,6 +1255,12 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 @media (max-height: 650px) {
   body .main-page-container .block-with-girl .start-btn {
     bottom: 50px;
+  }
+}
+
+@media (max-width: 357px) {
+  body .end-page-container .thx-message {
+    font-size: 17px;
   }
 }
 
