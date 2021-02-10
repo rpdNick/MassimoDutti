@@ -105,7 +105,6 @@ $('.nps-btn').on('change', function () {
 /* Show branch if radio was already checked*/
 $(document).ready(function (){
     let valNps = $('.nps-btn:checked').val() * 1;
-    console.log(valNps)
     let comments = document.querySelectorAll('.comment-field');
     for(let i = 0; i < comments.length; i++){
         let commentsVal = comments[i].value;
@@ -149,6 +148,9 @@ $(document).ready(function (){
     let subQuestionItem = $('.sub-radio-option:checked');
     if ($('.sub-radio-option').is(":checked") == true){
         $(subQuestionItem).parents('.sub-answers-box').find('.additional-answer-wrapper').show();
+    }else if ($('.sub-radio-option').is(":checked") == NaN){
+        console.log('228')
+        return false;
     }
 
     /* Show/hide comment if radio was checked */

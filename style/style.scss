@@ -569,7 +569,7 @@ body{
                   }
                   .checkmark{
                     position: absolute;
-                    top: 9px;
+                    top: 8px;
                     left: 25px;
                     width: 9px;
                     height: 9px;
@@ -588,8 +588,8 @@ body{
                     min-width: 9px;
                     position: absolute;
                     background: #9F0002;
-                    left: -1px;
-                    top: -1px;
+                    left: 0px;
+                    top: 0px;
                     border-radius: 50%;
                     box-sizing: unset;
                   }
