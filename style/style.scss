@@ -319,10 +319,10 @@ body{
                 position: absolute;
                 top: 3px;
                 left: 0px;
-                width: 16px;
-                height: 16px;
-                max-width: 16px;
-                min-width: 16px;
+                width: 14px;
+                height: 14px;
+                max-width: 14px;
+                min-width: 14px;
                 background-color: transparent;
                 border: 1px solid #666666;
                 border-radius: 50%;
@@ -337,10 +337,10 @@ body{
               }
               input:checked ~ .checkmark:before {
                 content: '';
-                width: 16px;
-                height: 16px;
-                max-width: 16px;
-                min-width: 16px;
+                width: 14px;
+                height: 14px;
+                max-width: 14px;
+                min-width: 14px;
                 position: absolute;
                 background: #9F0002;
                 left: -1px;
@@ -408,8 +408,8 @@ body{
                 }
               }
             }
-            .submit-wrapper{
-            }
+            // .submit-wrapper{
+            // }
             .sub-answer-wrapper{
               padding-left: 22px;
               display: none;
@@ -533,6 +533,7 @@ body{
             }
             .sub-answer-wrapper .sub-answers-box{
               .additional-answer-wrapper{
+                display: none;
                 .additional-answer-title{
                   display: inline-block;
                   font-style: italic;
@@ -849,6 +850,67 @@ body{
         .comment-main-container{
           display: none;
         }
+        .shoping-result-wrapper{
+          padding: 0 25px;
+          margin-top: 30px;
+          padding-bottom: 20px;
+          .shopping-result-title{
+            text-align: center;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #272323;
+          }
+          .shopping-result-box{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 120px;
+            margin: 0 auto;
+            .shopping-result-answer{
+              margin-top: 20px;
+              .shopping-result-btn{
+                display: none;
+                opacity: 0;
+              }
+              .circle-btn{
+                cursor: pointer;
+                .range-number{
+                  width: 49px;
+                  height: 49px;
+                  line-height: 47px;
+                  margin-right: 0px;
+                  text-align: center;
+                  border-radius: 50%;
+                  -webkit-transition: 0.5s;
+                  transition: 0.5s;
+                  font-size: 16px;
+                  color: #333;
+                  font-weight: 500;
+                }
+                .green{
+                  border: 1px solid #008A00;
+                }
+                .red{
+                  border: 1px solid #D04205;
+                }
+              }
+            }
+            input[type='radio']:checked + label .range-number{
+              color: #fff;
+              background: #333;
+              border: 1px solid #333;
+            }
+          }
+          .error{
+            font-weight: 600;
+            font-size: 12px;
+            color: #E1032E;
+            margin-top: 15px;
+            text-align: center;
+            display: none;
+          }
+        }
       }
     }
   }
@@ -874,6 +936,8 @@ body{
       padding: 40px 30px 0px 30px;
       img{
         width: 162px;
+        display: block;
+        margin: 0 auto;
       }
     }
     .thx-block{

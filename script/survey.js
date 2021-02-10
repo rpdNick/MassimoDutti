@@ -46,6 +46,11 @@ $('.nps-btn').on('change', function () {
         $('.main-comment').removeClass('required-main-comment');
         $('.sub-comment').removeClass('required-comment');
         $('.sub-radio-option').removeClass('required-sub-radio');
+        $('.shopping-result-btn').removeAttr('data-reqired','');
+        $('.shopping-result-btn').prop('checked', false);
+        $('.shoping-result-wrapper').hide();
+        $('.shoping-result-wrapper .error').hide();
+        $('.additional-answer-wrapper').hide();
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -76,6 +81,12 @@ $('.nps-btn').on('change', function () {
         $('.main-comment').removeClass('required-main-comment');
         $('.sub-comment').removeClass('required-comment');
         $('.sub-radio-option').removeClass('required-sub-radio');
+        $('.sub-radio-option').removeClass('required-sub-radio');
+        $('.shopping-result-btn').removeAttr('data-reqired','');
+        $('.shopping-result-btn').prop('checked', false);
+        $('.shoping-result-wrapper').hide();
+        $('.shoping-result-wrapper .error').hide();
+        $('.additional-answer-wrapper').hide();
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsNormal).length; i++){
@@ -94,6 +105,7 @@ $('.nps-btn').on('change', function () {
 /* Show branch if radio was already checked*/
 $(document).ready(function (){
     let valNps = $('.nps-btn:checked').val() * 1;
+    console.log(valNps)
     let comments = document.querySelectorAll('.comment-field');
     for(let i = 0; i < comments.length; i++){
         let commentsVal = comments[i].value;
@@ -132,11 +144,21 @@ $(document).ready(function (){
         $('.main-radio-option:checked').parents('.answer-array').find('.sub-answer-wrapper').hide();
     }
 
+    /* Show additional questions if sab-questions radio was checked */
+    $('.sub-radio-option').is(":checked");
+    let subQuestionItem = $('.sub-radio-option:checked');
+    if ($('.sub-radio-option').is(":checked") == true){
+        $(subQuestionItem).parents('.sub-answers-box').find('.additional-answer-wrapper').show();
+    }
+
     /* Show/hide comment if radio was checked */
     if ($('.main-radio-option').is(":checked") && $('.main-radio-option:checked').val() == 'Другое') {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).show();
+        $('.shoping-result-wrapper').show();
+        
     } else {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
+        $('.shoping-result-wrapper').hide();
     }
     /* Show/hide comment if sub-question was checked */
     if ($('.sub-radio-option').is(":checked") == true){
@@ -152,11 +174,18 @@ $('.main-radio-option').on('change', function (){
     if (val === 'Другое'){
         $(this).parents().find('.comment-main-container').slideDown();
         $('.main-comment').addClass('required-main-comment');
+        $('.shoping-result-wrapper').slideDown();
+        $('.shopping-result-btn').attr('data-reqired','');
     } else {
         $('.comment-label-wrapper .comment-field').val('');
         $('.main-comment').removeClass('required-main-comment');
         $('.main-comment-error').hide();
         $(this).parents().find('.comment-main-container').fadeOut();
+        $('.shopping-result-btn').removeAttr('data-reqired','');
+        $('.shoping-result-wrapper').slideUp();
+        $('.shopping-result-btn').prop('checked', false);
+        $('.shoping-result-wrapper .error').hide();
+
     }
     $('.sub-answer-comment-container').hide();
     /*Show and hide sub-questions*/
@@ -167,6 +196,11 @@ $('.main-radio-option').on('change', function (){
         $('.sub-radio-option').removeClass('required-sub-radio');
         $(this).parents('.answer-array').find('.sub-answer-wrapper .sub-radio-option').addClass('required-sub-radio');
     }
+});
+$('.sub-radio-option').on('change', function(){
+    $('.additional-answer-wrapper').hide();
+    $('.additional-radio-option').prop('checked', false);
+    $(this).parents('.sub-answers-box').find('.additional-answer-wrapper').fadeIn();
 });
 
 /* Show comments for sub-questions*/

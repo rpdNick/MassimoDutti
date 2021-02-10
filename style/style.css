@@ -395,10 +395,10 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
   position: absolute;
   top: 3px;
   left: 0px;
-  width: 16px;
-  height: 16px;
-  max-width: 16px;
-  min-width: 16px;
+  width: 14px;
+  height: 14px;
+  max-width: 14px;
+  min-width: 14px;
   background-color: transparent;
   border: 1px solid #666666;
   border-radius: 50%;
@@ -416,10 +416,10 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
 
 body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container input:checked ~ .checkmark:before {
   content: '';
-  width: 16px;
-  height: 16px;
-  max-width: 16px;
-  min-width: 16px;
+  width: 14px;
+  height: 14px;
+  max-width: 14px;
+  min-width: 14px;
   position: absolute;
   background: #9F0002;
   left: -1px;
@@ -635,6 +635,10 @@ body .survey-container .hidden-questions .question-wrapper .flex-container .answ
   color: #E1032E;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: none;
+}
+
+body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sub-answers-box .additional-answer-wrapper {
   display: none;
 }
 
@@ -1022,6 +1026,82 @@ body .survey-container .hidden-questions .question-main-container .comment-main-
   display: none;
 }
 
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper {
+  padding: 0 25px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-title {
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #272323;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer {
+  margin-top: 20px;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer .shopping-result-btn {
+  display: none;
+  opacity: 0;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer .circle-btn {
+  cursor: pointer;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer .circle-btn .range-number {
+  width: 49px;
+  height: 49px;
+  line-height: 47px;
+  margin-right: 0px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer .circle-btn .green {
+  border: 1px solid #008A00;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box .shopping-result-answer .circle-btn .red {
+  border: 1px solid #D04205;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .shopping-result-box input[type='radio']:checked + label .range-number {
+  color: #fff;
+  background: #333;
+  border: 1px solid #333;
+}
+
+body .survey-container .hidden-questions .question-main-container .shoping-result-wrapper .error {
+  font-weight: 600;
+  font-size: 12px;
+  color: #E1032E;
+  margin-top: 15px;
+  text-align: center;
+  display: none;
+}
+
 body .contacts-page-container {
   max-width: 450px;
   margin: 0 auto;
@@ -1049,6 +1129,8 @@ body .end-page-container .logo-box {
 
 body .end-page-container .logo-box img {
   width: 162px;
+  display: block;
+  margin: 0 auto;
 }
 
 body .end-page-container .thx-block {
