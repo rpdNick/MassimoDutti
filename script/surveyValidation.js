@@ -5,8 +5,8 @@ form.addEventListener('submit', function (e){
     e.preventDefault();
     let el = document.querySelectorAll('[data-reqired]');
     let subRadio = document.querySelectorAll('.required-sub-radio');
-    let subCommnts = document.querySelectorAll('.required-comment');
-    let mainComment = document.querySelectorAll('.required-main-comment');
+    // let subCommnts = document.querySelectorAll('.required-comment');
+    // let mainComment = document.querySelectorAll('.required-main-comment');
     let reqComment = document.querySelectorAll('.req-comment');
     let additionalRadio = document.querySelectorAll('.req-additional-radio');
     let erroreArrayElements = [];
@@ -49,32 +49,30 @@ form.addEventListener('submit', function (e){
         }
     }
 
-    for (let i = 0; i < subCommnts.length; i++){
-        let val = subCommnts[i].value;
-        if(val.length < 1){
-            erroreArrayElements.push(subCommnts[i]);
-            $(subCommnts[i]).on('click', function () {
-                $(this).parents('.comment-box').find('.sub-comment-error').hide();
-            });
-            $(subCommnts[i]).parents('.comment-box').find('.sub-comment-error').fadeIn();
-        }
-    }
+    // for (let i = 0; i < subCommnts.length; i++){
+    //     let val = subCommnts[i].value;
+    //     if(val.length < 1){
+    //         erroreArrayElements.push(subCommnts[i]);
+    //         $(subCommnts[i]).on('click', function () {
+    //             $(this).parents('.comment-box').find('.sub-comment-error').hide();
+    //         });
+    //         $(subCommnts[i]).parents('.comment-box').find('.sub-comment-error').fadeIn();
+    //     }
+    // }
 
-    for (let i = 0; i < mainComment.length; i++){
-        let val = mainComment[i].value;
-        if(val.length < 1){
-            erroreArrayElements.push(mainComment[i]);
-            $(mainComment[i]).on('click', function () {
-                $(this).parents('.main-comment-box').find('.main-comment-error').hide();
-            });
-            $(mainComment[i]).parents('.main-comment-box').find('.main-comment-error').fadeIn();
-        }
-    }
+    // for (let i = 0; i < mainComment.length; i++){
+    //     let val = mainComment[i].value;
+    //     if(val.length < 1){
+    //         erroreArrayElements.push(mainComment[i]);
+    //         $(mainComment[i]).on('click', function () {
+    //             $(this).parents('.main-comment-box').find('.main-comment-error').hide();
+    //         });
+    //         $(mainComment[i]).parents('.main-comment-box').find('.main-comment-error').fadeIn();
+    //     }
+    // }
 
     for (let i = 0; i < reqComment.length; i++){
         let val = reqComment[i].value;
-        // console.log(val.length);
-        // console.log(reqComment[i])
         if(val.length < 1){
             erroreArrayElements.push(reqComment[i]);
             $(reqComment[i]).on('click', function () {
