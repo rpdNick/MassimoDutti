@@ -30,7 +30,7 @@ body .main-page-container {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #e3ded8;
+  background-color: #f8f6f3;
   width: 100%;
   height: 100%;
   max-width: 450px;
@@ -147,7 +147,15 @@ body .survey-container .wrapper .main-question-box {
   margin-top: 20px;
 }
 
+body .survey-container .wrapper .main-question-box .greeting-txt {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
+}
+
 body .survey-container .wrapper .main-question-box .q-text {
+  margin-top: 20px;
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;

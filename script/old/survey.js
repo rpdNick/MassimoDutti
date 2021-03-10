@@ -12,8 +12,6 @@ $('.nps-btn').on('change', function () {
         $('.q-9-10').removeAttr('data-reqired','');
         $('.q-0-6').attr('data-reqired','');
         $('.q-7-8-comment').removeClass('req-comment');
-        $('.shopping-result-btn').attr('data-reqired','');
-        $('.shoping-result-wrapper').show();
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -162,11 +160,11 @@ $(document).ready(function (){
     /* Show/hide comment if radio was checked */
     if ($('.main-radio-option').is(":checked") && $('.main-radio-option:checked').val() == 'Другое') {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).show();
-        // $('.shoping-result-wrapper').show();
+        $('.shoping-result-wrapper').show();
         
     } else {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
-        // $('.shoping-result-wrapper').hide();
+        $('.shoping-result-wrapper').hide();
     }
     /* Show/hide comment if sub-question was checked */
     if ($('.sub-radio-option').is(":checked") == true){
@@ -182,17 +180,17 @@ $('.main-radio-option').on('change', function (){
     if (val === 'Другое'){
         $(this).parents().find('.comment-main-container').slideDown();
         $('.main-comment').addClass('required-main-comment');
-        // $('.shoping-result-wrapper').slideDown();
-        // $('.shopping-result-btn').attr('data-reqired','');
+        $('.shoping-result-wrapper').slideDown();
+        $('.shopping-result-btn').attr('data-reqired','');
     } else {
         $('.comment-label-wrapper .comment-field').val('');
         $('.main-comment').removeClass('required-main-comment');
         $('.main-comment-error').hide();
         $(this).parents().find('.comment-main-container').fadeOut();
-        // $('.shopping-result-btn').removeAttr('data-reqired','');
-        // $('.shoping-result-wrapper').slideUp();
-        // $('.shopping-result-btn').prop('checked', false);
-        // $('.shoping-result-wrapper .error').hide();
+        $('.shopping-result-btn').removeAttr('data-reqired','');
+        $('.shoping-result-wrapper').slideUp();
+        $('.shopping-result-btn').prop('checked', false);
+        $('.shoping-result-wrapper .error').hide();
 
     }
     $('.sub-answer-comment-container').hide();
